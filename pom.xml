@@ -68,6 +68,11 @@
             <version>1.0.0-RC9</version>
         </dependency>
         <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>font-awesome</artifactId>
+            <version>4.7.0</version>
+        </dependency>
+        <dependency>
             <!-- Optmistic lock exception-->
             <groupId>javax.persistence</groupId>
             <artifactId>persistence-api</artifactId>

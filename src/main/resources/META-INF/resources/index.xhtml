@@ -34,16 +34,21 @@
             <div class="bar"></div>
         </div>
 
+        <p:growl autoUpdate="true" showDetail="true" life="3000" severity="info" escape="false"/>
+
         <h:form>
             <div class="ui-g-12 ui-fluid">
-                <p:panel styleClass="card" header="AdminFaces integration">
+                <p:panel styleClass="card" header="Welcome to AdminBoot">
+                    <p:messages closable="true" autoUpdate="true" showDetail="true"
+                                severity="info,warn" escape="false"/>
+                    <p:spacer height="15"/>
                     <div class="material">
-                        <p:inputText id="input" value="#{inputMB.input}" placeholder="Input text" required="true"/>
-                        <p:outputLabel for="input" value="Material input"/>
-                        <p:message for="input"/>
+                        <p:inputText id="name" value="#{inputMB.name}" placeholder="Enter your name" required="true"/>
+                        <p:outputLabel for="name" value="Name"/>
+                        <p:message for="name"/>
                     </div>
                     <f:facet name="footer">
-                        <p:commandButton value="Submit" update="@form" styleClass="btn-primary"/>
+                        <p:commandButton value="Submit" action="#{inputMB.doAction}" update="@form" styleClass="btn-primary"/>
                     </f:facet>
                 </p:panel>
             </div>
@@ -61,6 +66,7 @@
         <h:outputScript library="js" name="bootstrap.min.js" target="head"/>
         <h:outputScript library="js" name="admin-lte.min.js" target="head"/>
         <h:outputScript library="js" name="admintemplate.js" target="head"/>
+        <h:outputStylesheet library="webjars" name="font-awesome/4.7.0/css/font-awesome-jsf.css"/> <!-- http://adminfaces-rpestano.rhcloud.com/showcase/docs/#prerequisites -->
         <!-- slide in/out menu integration  -->
         <h:outputScript library="js" name="slideout.min.js" target="head" rendered="#{adminConfig.enableSlideMenu}"/>
         <h:outputScript library="js" name="adminslide.js" target="head" rendered="#{adminConfig.enableSlideMenu}"/>
