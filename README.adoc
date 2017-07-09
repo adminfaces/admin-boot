@@ -1,0 +1,22 @@
+= AdminFaces and SpringBoot integration via JoinFaces
+:toc: preamble
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+AdminFaces and SpringBoot integration sample project.
+
+IMPORTANT: This project is still in PoC and still not fully working.
+
+== Running
+
+. Execute the following command: +
+----
+mvn clean install && java -jar target/admin-boot-2.4.0-SNAPSHOT.jar
+----
+. Access http://localhost:8080/index.jsf
+
+
+
