@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+    
+	<name>conta</name>
+	
+    <ordering>
+        <after>
+            <others/>
+        </after>
+    </ordering>
+    
+    <application>        
+        <locale-config>
+            <default-locale>pt_BR</default-locale>
+        </locale-config>
+    </application>
+    
+    <factory>
+        <exception-handler-factory>
+            org.omnifaces.exceptionhandler.FullAjaxExceptionHandlerFactory
+        </exception-handler-factory>
+    </factory>
+</faces-config>
