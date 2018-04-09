@@ -15,11 +15,11 @@ undertow:
 cdi:
   version: @cdi.version@
 mojarra:
-  version: @javax.faces.version@
+  version: @mojarra.version@
 myfaces:
   version: @myfaces.version@
 omnifaces:
-  version: @omnifaces.version@
+  version: @omnifaces1.version@
 angularfaces:
   version: @angularfaces.version@
 primefaces:

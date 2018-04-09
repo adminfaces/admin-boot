@@ -5,8 +5,8 @@
 
     <parent>
         <groupId>org.joinfaces</groupId>
-        <artifactId>jsf-spring-boot-parent</artifactId>
-        <version>2.4.1</version>
+        <artifactId>joinfaces-parent</artifactId>
+        <version>3.1.2-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -46,27 +46,11 @@
         </dependency>     
         <dependency>
             <groupId>org.joinfaces</groupId>
-            <artifactId>jsf-spring-boot-starter</artifactId>
+            <artifactId>adminfaces-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.adminfaces</groupId>
-            <artifactId>admin-template</artifactId>
-            <version>1.0.0-RC13-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.omnifaces</groupId>
-                    <artifactId>omnifaces</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.github.adminfaces</groupId>
-            <artifactId>admin-theme</artifactId>
-            <version>1.0.0-RC12</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
