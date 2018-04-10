@@ -20,8 +20,8 @@
         <mojarra.version>2.3.3</mojarra.version>
     </properties>
 
-    <name>JoinFaces Example</name>
-    <description>Example project for Jsf Spring Boot Starter</description>
+    <name>AdminFaces JoinFaces Example</name>
+    <description>Example project for AdminFaces Spring Boot Starter</description>
 
     <dependencies>
         <dependency>
