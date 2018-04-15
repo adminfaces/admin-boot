@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.joinfaces</groupId>
         <artifactId>joinfaces-parent</artifactId>
-        <version>3.1.2-SNAPSHOT</version>
+        <version>3.2.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -15,11 +15,6 @@
     <version>3.1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     
-    <properties>
-        <!-- submit button does not work with 2.3.4 version -->
-        <mojarra.version>2.3.3</mojarra.version>
-    </properties>
-
     <name>AdminFaces JoinFaces Example</name>
     <description>Example project for AdminFaces Spring Boot Starter</description>
 
