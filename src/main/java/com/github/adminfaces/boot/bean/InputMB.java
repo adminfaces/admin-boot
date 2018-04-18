@@ -2,7 +2,7 @@ package com.github.adminfaces.boot.bean;
 
 import org.omnifaces.util.Messages;
 
-import javax.faces.bean.ViewScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 

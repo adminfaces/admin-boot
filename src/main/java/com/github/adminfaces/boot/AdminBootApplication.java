@@ -16,32 +16,11 @@
 
 package com.github.adminfaces.boot;
 
-import com.github.adminfaces.template.config.AdminConfig;
-import com.github.adminfaces.template.session.AdminSession;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author rmpestano
  */
 @SpringBootApplication
-@ComponentScan("com.github.adminfaces")
-@ServletComponentScan("com.github.adminfaces")
 public class AdminBootApplication {
-
-	protected AdminBootApplication() {
-	}
-
-	@Bean
-	public AdminSession adminSession() {
-		return new AdminSession();
-	}
-
-	@Bean
-	public AdminConfig adminConfig() {
-		return new AdminConfig();
-	}
-
 }

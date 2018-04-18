@@ -1,67 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:adm="http://github.com/adminfaces">
-<f:view contentType="text/html">
-    <h:head>
-        <title>AdminFaces SpringBoot Example</title>
-        <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="mobile-web-app-capable" content="yes"/>
-    </h:head>
-    <h:body styleClass="#{skin2MB.skin} sidebar-mini #{not empty sidebarCollapse and sidebarCollapse eq 'true' ? 'sidebar-collapse':''}">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/admin-top.xhtml">
+    
+    <ui:define name="head">
+        <title>Admin Boot</title>
+    </ui:define>
 
-        <p:ajaxStatus rendered="#{adminConfig.renderAjaxStatus}"
-                      onstart="showBar();"
-                      onsuccess="hideBar();"/>
+    <ui:define name="logo">
+        Admin Boot
+    </ui:define>
+   
+    <ui:define name="title">
+        AdminFaces SpringBoot Example
+    </ui:define>
 
-        <p:dialog modal="true" widgetVar="statusDialog" draggable="false" closable="false"
-                  resizable="false" responsive="true" showHeader="false"
-                  style="z-index: 9999!important;position: fixed">
-            <p:graphicImage library="images" name="ajaxloadingbar.gif"/>
-        </p:dialog>
-
-        <div id="loader" class="load-bar" style="display: none">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-
-        <p:growl autoUpdate="true" showDetail="true" life="3000" severity="info" escape="false"/>
-
-        <h:form>
-            <div class="ui-g-12 ui-fluid">
-                <p:panel styleClass="card" header="Welcome to AdminBoot">
-                    <p:messages closable="true" autoUpdate="true" showDetail="true"
-                                severity="info,warn" escape="false"/>
-                    <p:spacer height="15"/>
-                    <div class="material">
-                        <p:inputText id="name" value="#{inputMB.name}" placeholder="Enter your name" required="true"/>
-                        <p:outputLabel for="name" value="Name"/>
-                        <p:message for="name"/>
-                    </div>
-                    <f:facet name="footer">
-                        <p:commandButton value="Submit" action="#{inputMB.doAction}" update="@form" styleClass="btn-primary"/>
-                    </f:facet>
-                </p:panel>
-            </div>
-        </h:form>
-
-        <adm:ripple elements=".ui-button"/>
-
-        <h:outputScript library="primefaces" name="jquery/jquery.js" target="head"/>
-        <h:outputScript library="js" name="bootstrap.min.js" target="head"/>
-        <h:outputScript library="js" name="admin-lte.min.js" target="head"/>
-        <h:outputScript library="js" name="admintemplate.js" target="head"/>
-        <h:outputStylesheet library="webjars" name="font-awesome/4.7.0/css/font-awesome-jsf.css"/> <!-- http://adminfaces-rpestano.rhcloud.com/showcase/docs/#prerequisites -->
-
-    </h:body>
-</f:view>
-</html>
+    <ui:define name="body" >
+            <h:form>
+                <div class="ui-g-12 ui-fluid">
+                    <p:panel styleClass="card" header="Welcome to AdminBoot">
+                        <p:spacer height="15"/>
+                        <div class="material">
+                            <p:inputText id="name" value="#{inputMB.name}" placeholder="Enter your name" required="true"/>
+                            <p:outputLabel for="name" value="Name"/>
+                            <p:message for="name"/>
+                        </div>
+                        <f:facet name="footer">
+                            <p:commandButton value="Submit" action="#{inputMB.doAction}" update="@form" styleClass="btn-primary"/>
+                        </f:facet>
+                    </p:panel>
+                </div>
+            </h:form>
+    </ui:define>
+</ui:composition>
