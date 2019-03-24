@@ -18,6 +18,26 @@
     <name>AdminFaces JoinFaces Example</name>
     <description>Example project for AdminFaces Spring Boot Starter</description>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.adminfaces</groupId>
+                <artifactId>admin-template</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.adminfaces</groupId>
+                <artifactId>admin-theme</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.primefaces</groupId>
+                <artifactId>primefaces</artifactId>
+                <version>7.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
